@@ -1,8 +1,15 @@
 
-## Encender servidor xampp
+* ## Encender servidor xampp en linux
+    sudo /opt/lampp/lampp start
+* ## Encender servidor xampp en Windows
+    cd C:\xampp\mysql\bin
+* ## Encender servidor xampp en Mac
+    cd /Applications/XAMPP/xamppfiles/bin
 
-sudo /opt/lampp/lampp start
 
-## Abrir mysql desde terminal
-
-/opt/lampp/bin/mysql -u root
+* ## Abrir mysql desde terminal en linux
+    /opt/lampp/bin/mysql -u root
+* ## Abrir mysql desde terminal en windows
+    mysql -u root
+* ## Abrir mysql desde terminal en Mac
+    ./mysql -u root
