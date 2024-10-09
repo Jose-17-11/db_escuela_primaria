@@ -10,6 +10,6 @@
 * ## Abrir mysql desde terminal en linux
     /opt/lampp/bin/mysql -u root
 * ## Abrir mysql desde terminal en windows
-    mysql -u root
+    mysql -u root -p
 * ## Abrir mysql desde terminal en Mac
-    ./mysql -u root
+    ./mysql -u root -p
