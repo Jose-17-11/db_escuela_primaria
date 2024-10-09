@@ -59,6 +59,20 @@ INSERT INTO materias (nombre, descripcion) VALUES
 ('Ética', 'Formación de valores y convivencia.'),
 ('Civismo', 'Derechos y deberes ciudadanos.');
 
+-- Inserccion de 10 eventos
+INSERT INTO eventos (nombre_evento, fecha_evento, descripcion, organizador) 
+VALUES 
+('Concierto de Navidad', '2024-12-15', 'Un concierto festivo con música navideña.', 'Orquesta Sinfónica Local'),
+('Feria de Tecnología', '2025-01-20', 'Una feria dedicada a las últimas innovaciones tecnológicas.', 'Tech Innovators'),
+('Caminata por la Salud', '2025-02-10', 'Una caminata para promover un estilo de vida saludable.', 'Comunidad Saludable'),
+('Taller de Arte', '2025-03-05', 'Taller de pintura y escultura para todas las edades.', 'Centro Cultural'),
+('Cine al Aire Libre', '2025-04-12', 'Proyección de películas clásicas bajo las estrellas.', 'Cine Club Local'),
+('Festival de Comida', '2025-05-18', 'Un festival donde se podrá degustar comida de diferentes países.', 'Gastronomía Internacional'),
+('Maratón de Lectura', '2025-06-25', 'Un evento donde se fomenta la lectura entre niños y adultos.', 'Biblioteca Municipal'),
+('Exposición de Fotografía', '2025-07-30', 'Muestra de fotografías de artistas locales.', 'Galería de Arte'),
+('Competencia de Robótica', '2025-08-15', 'Competencia para estudiantes de robótica de diversas escuelas.', 'Escuelas de Innovación'),
+('Cierre de Verano', '2025-09-05', 'Evento para despedir el verano con actividades recreativas.', 'Comunidad Recreativa');
+
 
 -- Inserccion para padres, como el rfc y el curp son mas largos se tuvo que modificar el tamaño de esos dos campos con las siguientes consultas:
 ALTER TABLE usuarios MODIFY rfc VARCHAR(20);
@@ -551,6 +565,61 @@ VALUES
 (99, 49, '2024-09-10', 'Justificado'),
 (100, 50, '2024-09-10', 'Ausente');
 
+-- 50 insercciones de asistencia docentes
+INSERT INTO asistencia_docentes (id_docente, genero) 
+VALUES 
+(81, 'presente'),
+(82, 'ausente'),
+(83, 'justificado'),
+(84, 'presente'),
+(85, 'ausente'),
+(86, 'justificado'),
+(87, 'presente'),
+(88, 'ausente'),
+(89, 'justificado'),
+(90, 'presente'),
+(91, 'ausente'),
+(92, 'justificado'),
+(93, 'presente'),
+(94, 'ausente'),
+(95, 'justificado'),
+(96, 'presente'),
+(97, 'ausente'),
+(98, 'justificado'),
+(99, 'presente'),
+(100, 'ausente'),
+(101, 'justificado'),
+(102, 'presente'),
+(103, 'ausente'),
+(104, 'justificado'),
+(105, 'presente'),
+(106, 'ausente'),
+(107, 'justificado'),
+(108, 'presente'),
+(109, 'ausente'),
+(110, 'justificado'),
+(111, 'presente'),
+(112, 'ausente'),
+(113, 'justificado'),
+(114, 'presente'),
+(115, 'ausente'),
+(116, 'justificado'),
+(117, 'presente'),
+(118, 'ausente'),
+(119, 'justificado'),
+(120, 'presente'),
+(121, 'ausente'),
+(122, 'justificado'),
+(123, 'presente'),
+(124, 'ausente'),
+(125, 'justificado'),
+(126, 'presente'),
+(127, 'ausente'),
+(128, 'justificado'),
+(129, 'presente'),
+(130, 'ausente');
+
+
 -- Inserccion de boletas
 INSERT INTO boletas (id_alumno, ciclo_escolar, observaciones) VALUES
 (1, '2023-2024', 'Buen desempeño en matemáticas.'),
@@ -604,3 +673,56 @@ INSERT INTO boletas (id_alumno, ciclo_escolar, observaciones) VALUES
 (49, '2023-2024', 'Excelente en habilidades matemáticas.'),
 (50, '2023-2024', 'Sobresale en educación artística.');
 
+-- 50 insercciones de participacion_eventos
+INSERT INTO participacion_eventos (id_evento, id_padre, tipo_participacion) 
+VALUES 
+(1, 1, 'Asistente'),
+(2, 2, 'Organizador'),
+(3, 3, 'Asistente'),
+(4, 4, 'Patrocinador'),
+(5, 5, 'Asistente'),
+(6, 6, 'Organizador'),
+(7, 7, 'Asistente'),
+(8, 8, 'Patrocinador'),
+(9, 9, 'Asistente'),
+(10, 10, 'Organizador'),
+(1, 11, 'Asistente'),
+(2, 12, 'Organizador'),
+(3, 13, 'Asistente'),
+(4, 14, 'Patrocinador'),
+(5, 15, 'Asistente'),
+(6, 16, 'Organizador'),
+(7, 17, 'Asistente'),
+(8, 18, 'Patrocinador'),
+(9, 19, 'Asistente'),
+(10, 20, 'Organizador'),
+(1, 21, 'Asistente'),
+(2, 22, 'Organizador'),
+(3, 23, 'Asistente'),
+(4, 24, 'Patrocinador'),
+(5, 25, 'Asistente'),
+(6, 26, 'Organizador'),
+(7, 27, 'Asistente'),
+(8, 28, 'Patrocinador'),
+(9, 29, 'Asistente'),
+(10, 30, 'Organizador'),
+(1, 31, 'Asistente'),
+(2, 32, 'Organizador'),
+(3, 33, 'Asistente'),
+(4, 34, 'Patrocinador'),
+(5, 35, 'Asistente'),
+(6, 36, 'Organizador'),
+(7, 37, 'Asistente'),
+(8, 38, 'Patrocinador'),
+(9, 39, 'Asistente'),
+(10, 40, 'Organizador'),
+(1, 41, 'Asistente'),
+(2, 42, 'Organizador'),
+(3, 43, 'Asistente'),
+(4, 44, 'Patrocinador'),
+(5, 45, 'Asistente'),
+(6, 46, 'Organizador'),
+(7, 47, 'Asistente'),
+(8, 48, 'Patrocinador'),
+(9, 49, 'Asistente'),
+(10, 50, 'Organizador');
