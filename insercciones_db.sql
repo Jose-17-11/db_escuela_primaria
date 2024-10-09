@@ -60,6 +60,10 @@ INSERT INTO materias (nombre, descripcion) VALUES
 ('Civismo', 'Derechos y deberes ciudadanos.');
 
 
+-- Inserccion para padres, como el rfc y el curp son mas largos se tuvo que modificar el tamaño de esos dos campos con las siguientes consultas:
+ALTER TABLE usuarios MODIFY rfc VARCHAR(20);
+ALTER TABLE usuarios MODIFY curp VARCHAR(20);
+
 -- Inserccion de 50 usuarios que seran docentes
 -- 20 usuarios
 INSERT INTO usuarios (apellido_paterno, apellido_materno, nombre, email, telefono, curp, fecha_nacimiento, genero, rfc, tipo_usuario)
@@ -221,6 +225,59 @@ VALUES
 (315, 'Alcántara', 'Cordero', 'Jessica', 'jessica.alcantara@example.com', '5598901234', 'ALCJ920303MDFCZR49', '1992-03-03', 'F', 'ALCJ920303321', 4),
 (316, 'Castillo', 'Torres', 'Pablo', 'pablo.castillo@example.com', '5599012345', 'CATP860404HDFBRM50', '1986-04-04', 'M', 'CATP860404987', 4),
 (317, 'Morales', 'Gutiérrez', 'Javier', 'javier.morales@example.com', '5556789012', 'MOGJ800101HDFLRR08', '1980-01-01', 'M', 'MOGJ800101HDF', 4);
+
+-- Inserccion de 50 usuarios que seran padres
+INSERT INTO usuarios (apellido_paterno, apellido_materno, nombre, email, telefono, curp, fecha_nacimiento, genero, rfc, tipo_usuario) VALUES
+('García', 'López', 'Juan', 'juan.garcia@mail.com', '555-1234', 'GALO900101HDFRRL01', '1990-01-01', 'M', 'GALO9001011R1', 3),
+('Pérez', 'Martínez', 'María', 'maria.perez@mail.com', '555-5678', 'PEMA910202MDFMRT02', '1991-02-02', 'F', 'PEMA9102021R2', 3),
+('Hernández', 'Gómez', 'Luis', 'luis.hernandez@mail.com', '555-8765', 'HEGL920303HDFGRZ03', '1992-03-03', 'M', 'HEGL9203031R3', 3),
+('Luna', 'Fernández', 'Ana', 'ana.luna@mail.com', '555-4321', 'LUFE930404MDFLNR04', '1993-04-04', 'F', 'LUFE9304041R4', 3),
+('Ramírez', 'Sánchez', 'Carlos', 'carlos.ramirez@mail.com', '555-6789', 'RASA940505HDFRSC05', '1994-05-05', 'M', 'RASA9405051R5', 3),
+('Díaz', 'Morales', 'Gabriela', 'gabriela.diaz@mail.com', '555-1357', 'DIMOG950606MDFMRA06', '1995-06-06', 'F', 'DIMOG9506061R6', 3),
+('Mendoza', 'Ruiz', 'Fernando', 'fernando.mendoza@mail.com', '555-9753', 'MERF960707HDFMNR07', '1996-07-07', 'M', 'MERF9607071R7', 3),
+('Ortiz', 'Torres', 'Laura', 'laura.ortiz@mail.com', '555-2468', 'ORTL970808MDFTRS08', '1997-08-08', 'F', 'ORTL9708081R8', 3),
+('Chávez', 'Vargas', 'Jorge', 'jorge.chavez@mail.com', '555-8642', 'CHVJ980909HDFVGR09', '1998-09-09', 'M', 'CHVJ9809091R9', 3),
+('Reyes', 'Cruz', 'Daniela', 'daniela.reyes@mail.com', '555-3579', 'RECD990101MDFCRS10', '1999-01-01', 'F', 'RECD9901011R0', 3),
+('Ramos', 'Fuentes', 'Diego', 'diego.ramos@mail.com', '555-7531', 'RAFUD000202HDFNTS11', '2000-02-02', 'M', 'RAFUD0002021R1', 3),
+('Vega', 'Molina', 'Andrea', 'andrea.vega@mail.com', '555-1593', 'VEMA010303MDFMNA12', '2001-03-03', 'F', 'VEMA0103031R2', 3),
+('Gómez', 'Ávila', 'José', 'jose.gomez@mail.com', '555-9517', 'GOAJ020404HDFMVA13', '2002-04-04', 'M', 'GOAJ0204041R3', 3),
+('Santos', 'Lara', 'Paola', 'paola.santos@mail.com', '555-2864', 'SAPA030505MDFLRA14', '2003-05-05', 'F', 'SAPA0305051R4', 3),
+('Molina', 'Flores', 'Pablo', 'pablo.molina@mail.com', '555-4682', 'MOFP040606HDFLFR15', '2004-06-06', 'M', 'MOFP0406061R5', 3),
+('Morales', 'Escobar', 'Liliana', 'liliana.morales@mail.com', '555-8426', 'MOEL050707MDFESL16', '2005-07-07', 'F', 'MOEL0507071R6', 3),
+('Ibarra', 'Ríos', 'David', 'david.ibarra@mail.com', '555-6248', 'IBRD060808HDFRRS17', '2006-08-08', 'M', 'IBRD0608081R7', 3),
+('Aguilar', 'Ramírez', 'Rosa', 'rosa.aguilar@mail.com', '555-7135', 'AGRR070909MDFRMZ18', '2007-09-09', 'F', 'AGRR0709091R8', 3),
+('Pineda', 'Navarro', 'Felipe', 'felipe.pineda@mail.com', '555-3517', 'PINF080101HDFNVR19', '2008-01-01', 'M', 'PINF0801011R9', 3),
+('Villalobos', 'Jiménez', 'Karen', 'karen.villalobos@mail.com', '555-1358', 'VIJK090202MDFLMZ20', '2009-02-02', 'F', 'VIJK0902021R0', 3),
+('Galván', 'Alvarado', 'Miguel', 'miguel.galvan@mail.com', '555-9764', 'GAMM100303HDFLVR21', '2010-03-03', 'M', 'GAMM1003031R1', 3),
+('Escobar', 'Salazar', 'Lucía', 'lucia.escobar@mail.com', '555-1597', 'ESLL110404MDFLZR22', '2011-04-04', 'F', 'ESLL1104041R2', 3),
+('Cortés', 'Blanco', 'Carlos', 'carlos.cortes@mail.com', '555-2684', 'COBC120505HDFLNC23', '2012-05-05', 'M', 'COBC1205051R3', 3),
+('Serrano', 'Castillo', 'Iván', 'ivan.serrano@mail.com', '555-8537', 'SECI130606HDFCSR24', '2013-06-06', 'M', 'SECI1306061R4', 3),
+('Montoya', 'Ortiz', 'Julia', 'julia.montoya@mail.com', '555-3146', 'MOJU140707MDFNTS25', '2014-07-07', 'F', 'MOJU1407071R5', 3),
+('Vargas', 'Martínez', 'Oscar', 'oscar.vargas@mail.com', '555-7894', 'VAMA150808HDFMRS26', '2015-08-08', 'M', 'VAMA1508081R6', 3),
+('López', 'Cabrera', 'Sandra', 'sandra.lopez@mail.com', '555-3578', 'LOCS160909MDFCBR27', '2016-09-09', 'F', 'LOCS1609091R7', 3),
+('Ramírez', 'Estrada', 'Luis', 'luis.ramirez@mail.com', '555-7539', 'RAEL170101HDFSTR28', '2017-01-01', 'M', 'RAEL1701011R8', 3),
+('González', 'Valdez', 'Alma', 'alma.gonzalez@mail.com', '555-4628', 'GOAL180202MDFLDS29', '2018-02-02', 'F', 'GOAL1802021R9', 3),
+('Flores', 'Galindo', 'Manuel', 'manuel.flores@mail.com', '555-9367', 'FLGM190303HDFGLN30', '2019-03-03', 'M', 'FLGM1903031R0', 3),
+('Navarro', 'Quintana', 'Isabel', 'isabel.navarro@mail.com', '555-1597', 'NAQI200404MDFQNA31', '2020-04-04', 'F', 'NAQI2004041R1', 3),
+('Cárdenas', 'Soto', 'José', 'jose.cardenas@mail.com', '555-8753', 'CASJ210505HDFSOT32', '2021-05-05', 'M', 'CASJ2105051R2', 3),
+('Arriaga', 'Hernández', 'Marcos', 'marcos.arriaga@mail.com', '555-3684', 'ARHM220606HDFNTR33', '2022-06-06', 'M', 'ARHM2206061R3', 3),
+('Torres', 'Olvera', 'Susana', 'susana.torres@mail.com', '555-4862', 'TROS230707MDFOLR34', '2023-07-07', 'F', 'TROS2307071R4', 3),
+('Márquez', 'Salinas', 'Fernando', 'fernando.marquez@mail.com', '555-8246', 'MASF240808HDFSAL35', '2024-08-08', 'M', 'MASF2408081R5', 3),
+('Ríos', 'Vásquez', 'Estela', 'estela.rios@mail.com', '555-2648', 'RIVA250909MDFVQS36', '2025-09-09', 'F', 'RIVA2509091R6', 3),
+('Méndez', 'Vega', 'César', 'cesar.mendez@mail.com', '555-7135', 'MEVC260101HDFVGZ37', '2026-01-01', 'M', 'MEVC2601011R7', 3),
+('Ortiz', 'Pacheco', 'Verónica', 'veronica.ortiz@mail.com', '555-3517', 'ORPV270202MDFPCO38', '2027-02-02', 'F', 'ORPV2702021R8', 3),
+('Núñez', 'Reyes', 'Javier', 'javier.nunez@mail.com', '555-1358', 'NURJ280303HDFRYS39', '2028-03-03', 'M', 'NURJ2803031R9', 3),
+('Rosales', 'Aranda', 'Marta', 'marta.rosales@mail.com', '555-9764', 'ROAM290404MDFRND40', '2029-04-04', 'F', 'ROAM2904041R0', 3),
+('Vázquez', 'Ortega', 'Sergio', 'sergio.vazquez@mail.com', '555-1597', 'VAOS300505HDFTRG41', '2030-05-05', 'M', 'VAOS3005051R1', 3),
+('Guerra', 'Montes', 'Juliana', 'juliana.guerra@mail.com', '555-2684', 'GUMJ310606MDFMNS42', '2031-06-06', 'F', 'GUMJ3106061R2', 3),
+('Solís', 'Peña', 'Adrián', 'adrian.solis@mail.com', '555-8537', 'SOPA320707HDFPNA43', '2032-07-07', 'M', 'SOPA3207071R3', 3),
+('Valencia', 'Pérez', 'Laura', 'laura.valencia@mail.com', '555-3146', 'VAPE330808MDFLRS44', '2033-08-08', 'F', 'VAPE3308081R4', 3),
+('Herrera', 'Nieves', 'Miguel', 'miguel.herrera@mail.com', '555-7894', 'HENM340909HDFNVZ45', '2034-09-09', 'M', 'HENM3409091R5', 3),
+('Escobedo', 'Cruz', 'Camila', 'camila.escobedo@mail.com', '555-3578', 'ESCC350101MDFCRS46', '2035-01-01', 'F', 'ESCC3501011R6', 3),
+('Jiménez', 'Gutiérrez', 'David', 'david.jimenez@mail.com', '555-7539', 'JIGD360202HDFGTS47', '2036-02-02', 'M', 'JIGD3602021R7', 3),
+('Fuentes', 'Alarcón', 'Iván', 'ivan.fuentes@mail.com', '555-4628', 'FUAI370303HDFLCN48', '2037-03-03', 'M', 'FUAI3703031R8', 3),
+('Bautista', 'Pineda', 'Luisa', 'luisa.bautista@mail.com', '555-9367', 'BAPL380404MDFPND49', '2038-04-04', 'F', 'BAPL3804041R9', 3),
+('Tovar', 'Estrada', 'Enrique', 'enrique.tovar@mail.com', '555-1597', 'TOEE390505HDFEST50', '2039-05-05', 'M', 'TOEE3905051R0', 3);
 
 
 -- Inserccion de 50 alumnos
@@ -384,6 +441,61 @@ VALUES
 (265, 'Director de Tecnología', 'MBA', '123123123', 72000.00, '666-77-8888', 'Gestión de la infraestructura tecnológica.'),
 (266, 'Gerente de Producción', 'Ingeniería Industrial', '456456456', 60000.00, '777-88-9999', 'Supervisión de procesos de producción.'),
 (267, 'Coordinador de Marketing Digital', 'Licenciatura en Mercadotecnia', '789789789', 45000.00, '888-99-0000', 'Estrategias de marketing en línea.');
+
+-- Inserccion de 50 padres
+INSERT INTO padres (id_usuario, id_alumno, parentesco, alergias, tipo_sangre) 
+VALUES 
+(468, 1, 'Padre', 'Ninguna', 'O+'),
+(469, 2, 'Madre', 'Polen', 'A+'),
+(470, 3, 'Padre', 'Ninguna', 'B+'),
+(471, 4, 'Padre', 'Lácteos', 'AB+'),
+(472, 5, 'Madre', 'Ninguna', 'O-'),
+(473, 6, 'Padre', 'Ninguna', 'A-'),
+(474, 7, 'Madre', 'Penicilina', 'B-'),
+(475, 8, 'Padre', 'Gluten', 'AB-'),
+(476, 9, 'Padre', 'Ninguna', 'O+'),
+(477, 10, 'Madre', 'Frutos secos', 'A+'),
+(478, 11, 'Padre', 'Ninguna', 'B+'),
+(479, 12, 'Madre', 'Mariscos', 'AB+'),
+(480, 13, 'Padre', 'Polvo', 'O-'),
+(481, 14, 'Padre', 'Ninguna', 'A-'),
+(482, 15, 'Madre', 'Ninguna', 'B-'),
+(483, 16, 'Padre', 'Picaduras de insectos', 'AB-'),
+(484, 17, 'Padre', 'Ninguna', 'O+'),
+(485, 18, 'Madre', 'Ninguna', 'A+'),
+(486, 19, 'Padre', 'Ninguna', 'B+'),
+(487, 20, 'Madre', 'Penicilina', 'AB+'),
+(488, 21, 'Padre', 'Lácteos', 'O-'),
+(489, 22, 'Padre', 'Polen', 'A-'),
+(490, 23, 'Madre', 'Mariscos', 'B-'),
+(491, 24, 'Padre', 'Frutos secos', 'AB-'),
+(492, 25, 'Padre', 'Ninguna', 'O+'),
+(493, 26, 'Madre', 'Gluten', 'A+'),
+(494, 27, 'Padre', 'Ninguna', 'B+'),
+(495, 28, 'Padre', 'Ninguna', 'AB+'),
+(496, 29, 'Madre', 'Picaduras de insectos', 'O-'),
+(497, 30, 'Padre', 'Ninguna', 'A-'),
+(498, 31, 'Madre', 'Ninguna', 'B-'),
+(499, 32, 'Padre', 'Polen', 'AB-'),
+(500, 33, 'Padre', 'Penicilina', 'O+'),
+(501, 34, 'Madre', 'Mariscos', 'A+'),
+(502, 35, 'Padre', 'Lácteos', 'B+'),
+(503, 36, 'Madre', 'Frutos secos', 'AB+'),
+(504, 37, 'Padre', 'Ninguna', 'O-'),
+(505, 38, 'Madre', 'Polvo', 'A-'),
+(506, 39, 'Padre', 'Gluten', 'B-'),
+(507, 40, 'Padre', 'Ninguna', 'AB-'),
+(508, 41, 'Madre', 'Polen', 'O+'),
+(509, 42, 'Padre', 'Ninguna', 'A+'),
+(510, 43, 'Madre', 'Ninguna', 'B+'),
+(511, 44, 'Padre', 'Lácteos', 'AB+'),
+(512, 45, 'Madre', 'Picaduras de insectos', 'O-'),
+(513, 46, 'Padre', 'Frutos secos', 'A-'),
+(514, 47, 'Madre', 'Ninguna', 'B-'),
+(515, 48, 'Padre', 'Polvo', 'AB-'),
+(516, 49, 'Padre', 'Ninguna', 'O+'),
+(517, 50, 'Madre', 'Mariscos', 'A+');
+
 
 -- inserccion de asistencias de los alumnos
 INSERT INTO asistencias (id_asistencia, id_alumno, fecha, estado)
